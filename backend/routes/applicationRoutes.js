@@ -1,7 +1,7 @@
-const express = require("express");
+import express from "express"
 const router = express.Router();
-const Application = require("../models/Application");
-const { auth } = require("../middleware/authMiddleware");
+import Application from "../models/Application.js";
+import { auth } from "../middleware/authMiddleware.js";
 
 
 // 🟢 Student submits an application
@@ -47,4 +47,4 @@ router.get("/my-applications", auth, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
